@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página de inicio de sesión</title>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="login.js"></script>
+</head>
+<body>
+	<h1>Página de inicio de sesión</h1>
+	<form id="login-form" method="post" action="login.php">
+		<label for="email">Correo electrónico:</label>
+		<input type="email" id="email" name="email" required>
+		<label for="password">Contraseña:</label>
+		<input type="password" id="password" name="password" required>
+		<div class="g-recaptcha" data-sitekey="TU_SITEKEY_RECAPTCHA"></div>
+		<button type="submit">Iniciar sesión</button>
+	</form>
+	<div id="captcha" style="display:none;">
+		<label for="captcha-text">Por favor, ingrese el texto que aparece en la imagen:</label>
+		<input type="text" id="captcha-text" name="captcha-text">
+		<button id="captcha-button" type="submit">Verificar</button>
+	</div>
+</body>
+</html>
+
+
