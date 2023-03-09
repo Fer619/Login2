@@ -2,26 +2,30 @@
 <html>
 <head>
 	<title>Página de inicio de sesión</title>
-	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script src="login.js"></script>
 </head>
 <body>
-	<h1>Página de inicio de sesión</h1>
-	<form id="login-form" method="post" action="login.php">
-		<label for="email">Correo electrónico:</label>
-		<input type="email" id="email" name="email" required>
-		<label for="password">Contraseña:</label>
-		<input type="password" id="password" name="password" required>
+	<h1>Página de inicio de sesión</h1>	
+  <body>
+	
+<form method="post" action="login.php">
+    <?php if (isset($error)) { ?>
+      <div class="error"><?php echo $error; ?></div>
+    <?php } ?>
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" required>
 		<div class="g-recaptcha" data-sitekey="6LeZDuYkAAAAAKxSVmHN8UEp1F7Zl4UN0SWKqtvj"></div>
-		<button type="submit">Iniciar sesión</button>
-	</form>
-	<div id="captcha" style="display:none;">
-		<label for="captcha-text">Por favor, ingrese el texto que aparece en la imagen:</label>
-		<input type="text" id="captcha-text" name="captcha-text">
-		<button id="captcha-button" type="submit">Verificar</button>
-	</div>
-</body>
+    <div id="captcha-container">
+      <img src="captcha.php" alt="Captcha">
+      <input type="text" id="captcha-input" name="captcha" required>
+    </div>
+    <input type="submit" value="Iniciar sesión" id="submit-button">
+  </form>
+	
+	
+</body>	
 </html>
-
-
