@@ -1,0 +1,92 @@
+/* Estilos para el cuerpo de la página */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Estilos para el formulario */
+form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el captcha */
+#captcha-container {
+  margin-top: 20px;
+  position: relative;
+}
+
+#captcha-image {
+  border: 1px solid #ccc;
+  height: 80px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+#captcha-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 40px;
+  padding: 10px;
+  width: calc(100% - 210px);
+}
+
+/* Estilos para el botón de enviar */
+#submit-button {
+  margin-top: 20px;
+}
